@@ -25,7 +25,7 @@ const ProductList = () => {
     fetch("https://api.escuelajs.co/api/v1/products")
       .then((response) => response.json())
       .then((data) => {
-        // on fetch, bring the order back
+        // on fetch, bring the saved order back from sessionStorage
         const savedOrder = JSON.parse(sessionStorage.getItem("productOrder"));
         if (savedOrder) {
           setProducts(
